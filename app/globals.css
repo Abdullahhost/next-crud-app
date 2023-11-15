@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,41 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+/* 
+::-webkit-scrollbar {
+  display: none;
+} */
+
+
+.loader{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  backdrop-filter: blur(10px);
+}
+.loader span{
+  width: 9px;
+  height: 9vh;
+  background: #ffffff;
+  margin: 0rem .2rem;
+  animation: loader 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  animation-delay: calc(.1s * var(--x));
+
+}
+
+@keyframes loader {
+0%, 100%{
+  transform: scaleY(.3);
+  border-radius: 5px;
+
+}50%{
+  transform: scaleY(1);
+  border-radius: 10px;
+}
+
 }

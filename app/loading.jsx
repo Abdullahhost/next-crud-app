@@ -1,0 +1,18 @@
+
+
+import React from 'react'
+
+const Loading = () => {
+  return (
+    <div className='loader'>
+    <span style={{'--x' : 1}}></span>
+    <span style={{'--x' : 2}}></span>
+    <span style={{'--x' : 3}}></span>
+    <span style={{'--x' : 2}}></span>
+    <span style={{'--x' : 1}}></span>
+
+  </div>
+  )
+}
+
+export default Loading
